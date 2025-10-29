@@ -10,7 +10,7 @@ Features:
 
 Datasets
 Used during development/evaluation :
-  - AUDETER subset (fake clips) → used 3500 files for each folder (ie. tts, Hifigan, cosyvoice,..) for training, validation and testing
+  - AUDETER subset (fake clips) → used 3500 files for each 23 folders (ie. tts, Hifigan, cosyvoice,..) for training, validation and testing
   - Combined real datasets of ASVspoof 2021 and In-the-Wild audio deepfake → REAL pool used for training, validation and testing
   - The Fake or Real Dataset (external test) → mixed codecs/durations for robustness check using ONNX models.
 
