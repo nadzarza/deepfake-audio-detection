@@ -1,21 +1,22 @@
 # FusionNet: Deepfake Audio Detection (SpecRNet + RawGAT) with Server-Side Continual Learning & ONNX Mobile Deployment
-
 FusionNet (RawGAT-ST + SpecRNet) for detecting fake vs real speech. Train in PyTorch (Task-A clean, Task-B telephony/continual), export to ONNX, and can be evaluated on external datasets.
+## Link to notebook 
+Press this link for testing -> [Kaggle notebook for testing](https://www.kaggle.com/code/nadzarza/deepfake-audio-detection)
 
-Features:
+## Features:
   - Dual-branch FusionNet: raw waveform + Mel-spectrogram fusion.
   - Task A (baseline, clean audio) and Task B (telephony-style continual fine-tune).
   - One-click ONNX evaluator: runs on any folder with real/ and fake/ (case-insensitive) files.
   - Metrics & artifacts: AUC, EER, ROC plot, Confusion Matrix, per-file predictions CSV.
 
-Datasets
+## Datasets
 Used during development/evaluation :
   - AUDETER subset (fake clips) → used 3500 files for each 23 folders (ie. tts, Hifigan, cosyvoice,..) for training, validation and testing
   - Combined real datasets of ASVspoof 2021 and In-the-Wild audio deepfake → REAL pool used for training, validation and testing
   - The Fake or Real Dataset (external test) → mixed codecs/durations for robustness check using ONNX models.
 
 
-Model files
+## Model files
   - .pth – full PyTorch weights (used for training/continual learning).
   - .onnx – inference-only graph for deployment/testing for mobile usage (no continual learning).
   - any ONNX models produced (fusionnet_taskB.onnx, fusionnet_taskA.onnx) can be tested by pointing ONNX_PATH to it and running the ONNX quick test section.
