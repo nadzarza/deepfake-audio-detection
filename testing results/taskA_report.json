@@ -1,0 +1,53 @@
+{
+  "model_params": 118658,
+  "files": {
+    "fp32_path": "fusionnet_taskA_fp32.pth",
+    "fp32_mb": 0.463,
+    "int8_path": "fusionnet_taskA_int8_linear.pth",
+    "int8_mb": 0.301
+  },
+  "cpu_benchmark_fp32": {
+    "batches": 1003,
+    "samples": 32093,
+    "total_sec": 602.6607692241669,
+    "sec_per_batch": 0.6008581946402461,
+    "ms_per_sample": 18.77857380812535
+  },
+  "cpu_benchmark_int8": {
+    "batches": 1003,
+    "samples": 32093,
+    "total_sec": 658.5670223236084,
+    "sec_per_batch": 0.6565972306317133,
+    "ms_per_sample": 20.52058150760628
+  },
+  "metrics_fp32": {
+    "confusion_matrix": [
+      [
+        15988,
+        5
+      ],
+      [
+        8,
+        16092
+      ]
+    ],
+    "roc_auc": 0.9999681712457275,
+    "eer": 0.0003739174708810807,
+    "eer_threshold": 0.12028738111257553
+  },
+  "metrics_int8": {
+    "confusion_matrix": [
+      [
+        15985,
+        8
+      ],
+      [
+        10,
+        16090
+      ]
+    ],
+    "roc_auc": 0.999967555681387,
+    "eer": 0.0005296125284625577,
+    "eer_threshold": 0.42638152837753296
+  }
+}
